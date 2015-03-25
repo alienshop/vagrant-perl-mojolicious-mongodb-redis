@@ -1,13 +1,13 @@
 # Configure apt for mongodb
 # http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | tee /etc/apt/sources.list.d/mongodb.list
-
+#echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | tee /etc/apt/sources.list.d/mongodb.list
+echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-3.0.list
 # Update apt sources
 apt-get update
 
 # Install stuff available through apt-get
-apt-get install -y curl unzip wget git vim mongodb-10gen build-essential
+apt-get install -y curl unzip wget git vim mongodb-org build-essential redis-server
 
 # Install cpanminus
 curl -L http://cpanmin.us | perl - App::cpanminus

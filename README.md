@@ -5,7 +5,7 @@ Vagrantfile for Ubuntu with Perl, Mojolicious, MongoDB, and Redis
 
 Requires Vagrant v2 - http://www.vagrantup.com/
 
-- Ubuntu 14.04 (chef/ubuntu-1404) - http://releases.ubuntu.com/trusty/
+- Ubuntu 14.04 (chef/ubuntu-14.04) - http://releases.ubuntu.com/trusty/
 - Perl 5.18.2 - http://www.perl.org
 - Mojolicious 4.80 - http://www.mojolicio.us
 - Mango 0.24 - http://mojolicio.us/perldoc/Mango
